@@ -1,0 +1,5 @@
+.idea
+out/
+*.iml
+src/Main.java
+src/Draft.java
