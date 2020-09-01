@@ -25,7 +25,7 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
  */
 
 public class BuyAndSellStock {
-    // Approach using valleys and peaks
+    // Find every peak immediately following a valley
     public int maxProfit(int[] prices) {
         int maxProfit = 0;
         for (int i = 0; i < prices.length - 1; i++) {
@@ -40,7 +40,8 @@ public class BuyAndSellStock {
 
         return maxProfit;
     }
-    // Approach using valleys and peaks by crawling over the slope and keep on adding the profit obtained from every consecutive transaction
+
+    // Crawl over the slope and keep on adding the profit obtained from every consecutive transaction
     public int maxProfit2(int[] prices) {
         int maxProfit = 0;
         for (int i = 0; i < prices.length - 1; i++) {

@@ -24,14 +24,14 @@ Output: true
 public class ContainsDuplicate {
     // Using HashMap
     public boolean containsDuplicate(int[] nums) {
-        HashMap<Integer, Integer> hashMap = new HashMap<>();
+        HashMap<Integer, Integer> hashMap = new HashMap<>(); // pairs of value and number of occurrence
         for (int x : nums) {
             int count = hashMap.getOrDefault(x, 0);
             hashMap.put(x, count + 1);
         }
-        int j = 0;
-        while (j < nums.length && hashMap.get(nums[j++]) == 1) ;
-        if (j < nums.length) {
+        int i = 0;
+        while (i < nums.length && hashMap.get(nums[i++]) == 1) ;
+        if (i < nums.length) {
             return true;
         } else {
             return false;

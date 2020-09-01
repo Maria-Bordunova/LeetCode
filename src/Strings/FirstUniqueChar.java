@@ -12,6 +12,7 @@ return 2.
 
  */
 public class FirstUniqueChar {
+    // Using String methods in order to find the first and the last char occurrences
     public int findFirstUniqueChar(String s) {
         for (int i = 0; i < s.length(); i++) {
             int firstIndex = s.indexOf(s.charAt(i));

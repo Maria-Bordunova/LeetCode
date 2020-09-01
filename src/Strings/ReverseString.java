@@ -17,16 +17,16 @@ Input: ["H","a","n","n","a","h"]
 Output: ["h","a","n","n","a","H"]
  */
 public class ReverseString {
-
+    // Using left and right pointers (boundaries)
     public void reverseString(char[] str) {
         int left = 0;
         int right = str.length - 1;
+
         while (right > left)
         {
             char temp = str[left];
             str[left++] = str[right];
             str[right--] = temp;
         }
-
     }
 }

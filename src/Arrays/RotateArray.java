@@ -24,13 +24,15 @@ rotate 2 steps to the right: [3,99,-1,-100]
 
  */
 public class RotateArray {
-    // rotate the elements in k steps by rotating the elements by 1 unit in each step.
+    // Rotate the elements in k steps by rotating the elements by 1 unit in each step
     public void rotate(int[] nums, int k) {
-        int last_index = nums.length - 1;
+        int last = nums.length - 1;
         k = k % nums.length;
+
         for (int j = 0; j < k; j++) {
-            int previous = nums[last_index];
-            for (int i = 0; i <= last_index; i++) {
+            int previous = nums[last];
+
+            for (int i = 0; i <= last; i++) {
                 int temp = nums[i];
                 nums[i] = previous;
                 previous = temp;

@@ -14,13 +14,16 @@ It doesn't matter what values are set beyond the returned length.
  */
 
 public class RemoveDuplicates {
-
+    // Using Slow and Fast Runner technique.
+    // The fast runner represents the current element and the slow runner represents flag the end of the new, non-duplicate array.
     public int removeDuplicates(int[] nums) {
         int i = 0;
         if (nums.length == 0) {
             return i;
         }
+        //  Fast runner grows each iteration
         for (int j = 1; j < nums.length; j++) {
+            // and slow runner grows with restrictions
             if (nums[j] != nums[i]) {
                 nums[++i] = nums[j];
             }
